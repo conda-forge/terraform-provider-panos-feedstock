@@ -1,10 +1,10 @@
 {% set provider= "panos" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
 
-{% set sha256 = "a6e4841a76f3bbd35fb9137971bad5c8a96456649f2739942cff48b480788646" %}
+{% set sha256 = "f068973096f055c80b214f9b0236d1f36f6ab20db839320872ec963546f1f659" %}
 {% set sha256_win32 = "4f48bccdcfff7b4802ef2ae1f4e71c872d68dcb48e068b4170fdadf4adad059c" %}
 {% set sha256_win64 = "189b12687c277c2a363e897d82c3621da6fb0bcfd0aa060e1bea60b8e0d863ce" %}
 
