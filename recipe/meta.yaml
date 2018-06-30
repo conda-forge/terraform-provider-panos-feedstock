@@ -1,5 +1,5 @@
 {% set provider = "panos" %}
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
@@ -11,11 +11,11 @@ package:
 source:
   url: https://github.com/terraform-providers/{{ name }}/archive/v{{ version }}.tar.gz  # [not win]
   fn: {{ name }}-{{ version }}.tar.gz  # [not win]
-  sha256: 86aaa11b40eb64f042275a095ea62e1f09c7bda12bbc5a3d6bfadcf391a144ef  # [not win]
+  sha256: 3f53ea79bc88f8fe7b2e694fa2dbaa22682cef24c41c549ac50136c3e26103ff  # [not win]
 
   url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_amd64.zip  # [win64]
   fn: {{ name }}-{{ version }}.zip  # [win]
-  sha256: 926b25c28375fce637dc271833e69d0b97806e0392b674c70ea49c1a4dd5550d  # [win64]
+  sha256: f23ae64455f1575eaabaffee82a7ba2a9b467d8af3e68b194ef3861fa4589a4e  # [win64]
 
 build:
   number: 0
