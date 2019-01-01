@@ -12,11 +12,10 @@ package:
   version: {{ version }}
 
 source:
+  - folder:  {{ pkg_src }}
     url: https://{{ goname }}/archive/v{{ version }}.tar.gz
-  fn: {{ name }}-{{ version }}.tar.gz  # [not win]
-  sha256: 3f53ea79bc88f8fe7b2e694fa2dbaa22682cef24c41c549ac50136c3e26103ff
+    sha256: 3f53ea79bc88f8fe7b2e694fa2dbaa22682cef24c41c549ac50136c3e26103ff
 
-  fn: {{ name }}-{{ version }}.zip  # [win]
 
 build:
   number: 1000
@@ -27,7 +26,7 @@ build:
 
 requirements:
   build:
-    - go 1.9.*  # [not win]
+    - {{ compiler('go') }} >=1.11.3
     - toolchain  # [not win]
   run:
     - terraform >=0.10  # [unix]
