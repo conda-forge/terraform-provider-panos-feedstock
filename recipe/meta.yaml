@@ -1,6 +1,6 @@
 {% set provider = "panos" %}
 {% set goname = "github.com/terraform-providers/terraform-provider-"+provider.lower() %}
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 
 {% set name = goname.split('/')[-1] %}
 {% set pkg_src = ('src/'+goname).replace("/",os.sep) %}
@@ -14,7 +14,7 @@ package:
 source:
   - folder:  {{ pkg_src }}
     url: https://{{ goname }}/archive/v{{ version }}.tar.gz
-    sha256: aec41c3cd171e0c0c1cf9b33c9c0f5ffae2bebc7df5f7f2cc4a3f368f587968f
+    sha256: a092c82a6da8a59662288705b6331d6af4a17d5b0a8d828485ebe23e9eba2fb2
 
 build:
   number: 0
